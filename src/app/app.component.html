@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="row">
+  <div class="card-columns" >
+  <div class="card" *ngFor="let item of cardList">
+    <img class="card-img-top" src="{{ item.img }}" alt="abcd">
+    <div class="card-body">
+            <div class="rating">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+       <span class="fa fa-star"></span> 
+       {{item.rating}}
+</div>
+<div><h5 class="card-title">{{item.title}}</h5>
+     <p class="location small">{{item.location}}</p>
+      </div>
+      <p class="card-text" *ngFor="let offer of item.offers">{{offer}}</p>
+      <span class="fa fa-heart"></span>
+      <p class="card-text"><a href="https://picsum.photos/600/400" target="_blank" class="buy-btn">Buy Now</a></p>
+    </div>
+  </div>
+
+</div>
+</div>
+<div class="row footer">
+  <div class="container">
+    <a href="#">FAQ</a>
+    <a href="#">About us</a>
+    <a href="#"><i class="fa fa-facebook fa-fw social"></i></a>
+    <a href="#"><i class="fa fa-linkedin fa-fw social"></i></a>
+    <a href="#"><i class="fa fa-twitter fa-fw social"></i></a>
+    <a href="#">&copy; 2015 Advantage Club</a>
+    <a href="#" class="white">Business Home</a>
+    <a href="#" class="white">Privacy Policy</a>
+    <a href="#" class="white">Refund Policy</a>
+    <a href="#" class="white">Terms of Use</a>
+  </div>
+</div>
+</body>
+
+
+  
